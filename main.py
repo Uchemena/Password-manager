@@ -3,9 +3,9 @@ from tkinter import messagebox
 from random import choice, randint, shuffle
 import json
 
-# ---------------------------- PASSWORD GENERATOR ------------------------------- #
+#PASSWORD GENERATOR 
 
-#Password Generator Project
+
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -22,7 +22,7 @@ def generate_password():
     password_entry.insert(0, password)
 
 
-#SAVE PASSWORD
+
 def save():
 
     website = website_entry.get()
@@ -40,7 +40,7 @@ def save():
     else:
         try:
             with open("data.json", "r") as data_file:
-                #Reading old data
+                
                 data = json.load(data_file)
         except FileNotFoundError:
             with open("data.json", "w") as data_file:
@@ -57,7 +57,7 @@ def save():
             password_entry.delete(0, END)
 
 
-#FIND PASSWORD
+
 def find_password():
     website = website_entry.get()
     try:
